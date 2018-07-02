@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/admin-module/admin-module.iml" filepath="$PROJECT_DIR$/admin-module/admin-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin-module/admin-module_main.iml" filepath="$PROJECT_DIR$/.idea/modules/admin-module/admin-module_main.iml" group="admin-module" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin-module/admin-module_test.iml" filepath="$PROJECT_DIR$/.idea/modules/admin-module/admin-module_test.iml" group="admin-module" />
+      <module fileurl="file://$PROJECT_DIR$/api-module/api-module.iml" filepath="$PROJECT_DIR$/api-module/api-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-module/api-module_main.iml" filepath="$PROJECT_DIR$/.idea/modules/api-module/api-module_main.iml" group="api-module" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-module/api-module_test.iml" filepath="$PROJECT_DIR$/.idea/modules/api-module/api-module_test.iml" group="api-module" />
+      <module fileurl="file://$PROJECT_DIR$/batch-module/batch-module.iml" filepath="$PROJECT_DIR$/batch-module/batch-module.iml" group="batch-module" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/batch-module/batch-module_main.iml" filepath="$PROJECT_DIR$/.idea/modules/batch-module/batch-module_main.iml" group="batch-module" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/batch-module/batch-module_test.iml" filepath="$PROJECT_DIR$/.idea/modules/batch-module/batch-module_test.iml" group="batch-module" />
+      <module fileurl="file://$PROJECT_DIR$/core-module/core-module.iml" filepath="$PROJECT_DIR$/core-module/core-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core-module/core-module_main.iml" filepath="$PROJECT_DIR$/.idea/modules/core-module/core-module_main.iml" group="core-module" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core-module/core-module_test.iml" filepath="$PROJECT_DIR$/.idea/modules/core-module/core-module_test.iml" group="core-module" />
+      <module fileurl="file://$PROJECT_DIR$/multi-module.iml" filepath="$PROJECT_DIR$/multi-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin-module/multi-module-admin-module.iml" filepath="$PROJECT_DIR$/.idea/modules/admin-module/multi-module-admin-module.iml" group="admin-module" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-module/multi-module-api-module.iml" filepath="$PROJECT_DIR$/.idea/modules/api-module/multi-module-api-module.iml" group="api-module" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/batch-module/multi-module-batch-module.iml" filepath="$PROJECT_DIR$/.idea/modules/batch-module/multi-module-batch-module.iml" group="batch-module" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core-module/multi-module-core-module.iml" filepath="$PROJECT_DIR$/.idea/modules/core-module/multi-module-core-module.iml" group="core-module" />
+    </modules>
+  </component>
+</project>

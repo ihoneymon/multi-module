@@ -1,0 +1,102 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+
+    group = 'io.honeymon.springboot.multimodule'
+    version = '0.0.1-SNAPSHOT'
+
+    targetCompatibility = 1.8
+    sourceCompatibility = 1.8
+    compileJava.options.encoding = 'UTF-8'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+project(":core-module") {
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    bootJar.enabled = false
+    jar.enabled = true
+
+    dependencies {
+        compile('org.springframework.boot:spring-boot-starter-data-jpa')
+        compile('org.flywaydb:flyway-core')
+        compile('org.projectlombok:lombok')
+        compile('org.springframework.boot:spring-boot-starter-logging')
+
+        compileOnly "org.springframework.boot:spring-boot-configuration-processor"
+
+        runtime('com.h2database:h2')
+        runtime('com.microsoft.sqlserver:mssql-jdbc')
+        runtime('mysql:mysql-connector-java')
+
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+    }
+}
+
+project(":api-module") {
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+
+    dependencies {
+        compile project(":core-module")
+
+        compile('org.springframework.boot:spring-boot-starter-data-rest')
+        compile('org.springframework.boot:spring-boot-starter-hateoas')
+        compile('org.springframework.boot:spring-boot-starter-web-services')
+        compile('org.springframework.boot:spring-boot-starter-webflux')
+        compile('org.springframework.data:spring-data-rest-hal-browser')
+
+        compileOnly "org.springframework.boot:spring-boot-configuration-processor"
+
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+        testCompile('io.projectreactor:reactor-test')
+    }
+}
+
+
+project(":admin-module") {
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+
+    dependencies {
+        compile project(":core-module")
+        compile('org.springframework.boot:spring-boot-starter-web')
+
+        compileOnly "org.springframework.boot:spring-boot-configuration-processor"
+    }
+}
+
+
+project(":batch-module") {
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+
+    dependencies {
+        compile project(":core-module")
+        compile('org.springframework.boot:spring-boot-starter-batch')
+
+        compileOnly "org.springframework.boot:spring-boot-configuration-processor"
+
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+    }
+}

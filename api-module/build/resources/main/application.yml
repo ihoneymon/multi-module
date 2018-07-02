@@ -1,0 +1,34 @@
+# commons
+spring:
+  profiles:
+    include:
+      - db
+      - auth
+
+---
+spring:
+  profiles: local
+logging:
+  level:
+    io.honeymon.springboot.multimodule.admin: TRACE
+
+---
+spring:
+  profiles: dev
+logging:
+  level:
+    io.honeymon.springboot.multimodule.admin: DEBUG
+
+---
+spring:
+  profiles: stage
+logging:
+  level:
+    io.honeymon.springboot.multimodule.admin: DEBUG
+
+---
+spring:
+  profiles: prod
+logging:
+  level:
+    io.honeymon.springboot.multimodule.admin: INFO

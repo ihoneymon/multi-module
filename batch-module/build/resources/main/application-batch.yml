@@ -1,0 +1,28 @@
+spring:
+  batch:
+    job:
+      enabled: false
+
+---
+spring.profiles: local
+
+---
+spring.profiles: dev
+spring:
+  batch:
+      job:
+        enabled: true
+
+---
+spring.profiles: stage
+spring:
+  batch:
+      job:
+        enabled: true
+
+---
+spring.profiles: prod
+spring:
+  batch:
+      job:
+        enabled: true

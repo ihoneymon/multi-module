@@ -1,0 +1,27 @@
+client:
+  id: honeymon
+  key: 20180416
+
+---
+spring.profiles: local
+client:
+  id: honeymon-local
+  key: 20180416-local
+
+---
+spring,profiles: dev
+client:
+  id: honeymon-dev
+  key: 20180416-dev
+
+---
+spring.profiles: stage
+client:
+  id: honeymon-stage
+  key: 20180416-stage
+
+---
+spring.profiles: prod
+client:
+  id: honeymon-prod
+  key: 20180416-prod

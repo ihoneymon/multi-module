@@ -1,0 +1,58 @@
+# 테스트 작성시 프로파일을 지정하지 않는 경우는...
+spring:
+  datasource:
+    url:  jdbc:h2:mem:multi
+    username: SA
+    password:
+  flyway:
+    enabled: false
+
+---
+spring.profiles: local
+spring:
+  datasource:
+    url:  jdbc:h2:mem:multi
+    username: SA
+    password:
+  flyway:
+    enabled: false
+
+---
+spring.profiles: dev
+spring:
+  datasource:
+    url:  jdbc:h2:mem:multi-dev
+    username: dbdev
+    password: dbdevpassword
+  flyway:
+      enabled: false
+
+---
+spring.profiles: stage
+spring:
+  datasource:
+    url:  jdbc:h2:mem:multi-stage
+    username: dbstage
+    password: dbstagepassword
+  flyway:
+      enabled: false
+
+---
+spring.profiles: prod
+spring:
+  datasource:
+    url:  jdbc:h2:mem:multi-prod
+    username: dbprod
+    password: dbprodpassword
+  flyway:
+      enabled: false
+
+---
+spring.profiles: db-prodj
+spring:
+  datasource:
+    url:  jdbc:h2:mem:multi-db-prod
+    username: dbprod
+    password: dbprodpassword
+  flyway:
+      enabled: false
