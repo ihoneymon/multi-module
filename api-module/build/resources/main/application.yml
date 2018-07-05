@@ -2,33 +2,34 @@
 spring:
   profiles:
     include:
-      - db
-      - auth
+      - core
+client:
+  id: honeymon
+  key: 20180416
 
 ---
-spring:
-  profiles: local
-logging:
-  level:
-    io.honeymon.springboot.multimodule.api: TRACE
+spring.profiles: local
+client:
+  id: honeymon-local
+  key: 20180416-local
 
 ---
-spring:
-  profiles: dev
-logging:
-  level:
-    io.honeymon.springboot.multimodule.api: DEBUG
+spring.profiles: dev
+client:
+  id: honeymon-dev
+  key: 20180416-dev
 
 ---
-spring:
-  profiles: stage
-logging:
-  level:
-    io.honeymon.springboot.multimodule.api: DEBUG
+spring.profiles: stage
+client:
+  id: honeymon-stage
+  key: 20180416-stage
 
 ---
+spring.profiles: prod
+client:
+  id: honeymon-prod
+  key: 20180416-prod
 spring:
-  profiles: prod
-logging:
-  level:
-    io.honeymon.springboot.multimodule.api: INFO
+  jpa:
+    open-in-view: false

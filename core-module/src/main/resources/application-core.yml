@@ -11,7 +11,7 @@ spring:
 spring.profiles: local
 spring:
   datasource:
-    url:  jdbc:h2:mem:multi
+    url:  jdbc:h2:mem:multi-local
     username: SA
     password:
   flyway:
@@ -48,7 +48,7 @@ spring:
       enabled: false
 
 ---
-spring.profiles: db-prodj
+spring.profiles: db-prod
 spring:
   datasource:
     url:  jdbc:h2:mem:multi-db-prod

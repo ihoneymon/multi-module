@@ -1,33 +1,13 @@
 spring:
   profiles:
     include:
-      - db
-      - thymeleaf
+      - core
+spring:
+  thymeleaf:
+    cache: true
 
 ---
+spring.profiles: local
 spring:
-  profiles: local
-logging:
-  level:
-    io.honeymon.springboot.multimodule.admin: TRACE
-
----
-spring:
-  profiles: dev
-logging:
-  level:
-    io.honeymon.springboot.multimodule.admin: DEBUG
-
----
-spring:
-  profiles: stage
-logging:
-  level:
-    io.honeymon.springboot.multimodule.admin: DEBUG
-
----
-spring:
-  profiles: prod
-logging:
-  level:
-    io.honeymon.springboot.multimodule.admin: INFO
+  thymeleaf:
+    cache: false

@@ -1,9 +1,0 @@
-spring:
-  thymeleaf:
-    cache: true
-
----
-spring.profiles: local
-spring:
-  thymeleaf:
-    cache: false

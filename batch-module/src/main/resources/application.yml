@@ -1,35 +1,33 @@
 spring:
   profiles:
     include:
-      - db
-      - batch
+      - core
   main:
     web-application-type: none
+  batch:
+    job:
+      enabled: false
 
 ---
-spring:
-  profiles: local
-logging:
-  level:
-    io.honeymon.springboot.multimodule.batch: TRACE
+spring.profiles: local
 
 ---
+spring.profiles: dev
 spring:
-  profiles: dev
-logging:
-  level:
-    io.honeymon.springboot.multimodule.batch: DEBUG
+  batch:
+      job:
+        enabled: true
 
 ---
+spring.profiles: stage
 spring:
-  profiles: stage
-logging:
-  level:
-    io.honeymon.springboot.multimodule.batch: DEBUG
+  batch:
+      job:
+        enabled: true
 
 ---
+spring.profiles: prod
 spring:
-  profiles: prod
-logging:
-  level:
-    io.honeymon.springboot.multimodule.batch: INFO
+  batch:
+      job:
+        enabled: true
