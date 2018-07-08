@@ -46,13 +46,3 @@ spring:
     password: dbprodpassword
   flyway:
       enabled: false
-
----
-spring.profiles: db-prod
-spring:
-  datasource:
-    url:  jdbc:h2:mem:multi-db-prod
-    username: dbprod
-    password: dbprodpassword
-  flyway:
-      enabled: false
