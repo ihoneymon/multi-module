@@ -54,6 +54,11 @@ project(":api-module") {
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
 
+    bootJar {
+        from('./src/main/ebextensions') {
+            into('.ebextensions')
+        }
+    }
 
     dependencies {
         compile project(":core-module")
